@@ -136,6 +136,8 @@ public:
         if(oldPassword != password_){
             throw invalid_argument ("oldpassword is not equal to the password");
         }
+        validate(newPassword);
+        password_ = newPassword;
     }
 
     // Check if a given string matches the stored password.
